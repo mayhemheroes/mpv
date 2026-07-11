@@ -1,0 +1,9 @@
+project: mpv
+target: fuzzer_json
+cmds:
+  - cmd: /mayhem/fuzzer_json
+    libfuzzer: true
+    dictionary: /mayhem/fuzzer_json.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzer_json/testsuite

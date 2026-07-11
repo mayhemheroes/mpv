@@ -1,0 +1,9 @@
+project: mpv
+target: fuzzer_load_config_file
+cmds:
+  - cmd: /mayhem/fuzzer_load_config_file
+    libfuzzer: true
+    dictionary: /mayhem/fuzzer_load_config_file.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzer_load_config_file/testsuite

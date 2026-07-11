@@ -1,0 +1,8 @@
+project: mpv
+target: fuzzer_protocol_edl
+cmds:
+  - cmd: /mayhem/fuzzer_protocol_edl
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzer_protocol_edl/testsuite

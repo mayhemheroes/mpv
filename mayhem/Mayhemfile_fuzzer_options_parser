@@ -1,0 +1,9 @@
+project: mpv
+target: fuzzer_options_parser
+cmds:
+  - cmd: /mayhem/fuzzer_options_parser
+    libfuzzer: true
+    dictionary: /mayhem/fuzzer_options_parser.dict
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzer_options_parser/testsuite

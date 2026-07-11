@@ -1,0 +1,8 @@
+project: mpv
+target: fuzzer_set_property_MPV_FORMAT_INT64_0
+cmds:
+  - cmd: /mayhem/fuzzer_set_property_MPV_FORMAT_INT64_0
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzer_set_property_MPV_FORMAT_INT64_0/testsuite
